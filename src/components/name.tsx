@@ -40,8 +40,8 @@ export default function Name({ isReady }: Props) {
       <InputOTP
         id="otp"
         autoFocus
-        type="text"
         maxLength={5}
+        inputMode="text"
         value={name}
         onChange={onChange}
         pattern={REGEXP_ONLY_CHARS}
