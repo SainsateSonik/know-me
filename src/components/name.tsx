@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { REGEXP_ONLY_CHARS } from 'input-otp'
 
 import {
   InputOTP,
@@ -39,9 +40,11 @@ export default function Name({ isReady }: Props) {
       <InputOTP
         id="otp"
         autoFocus
+        type="text"
         maxLength={5}
         value={name}
         onChange={onChange}
+        pattern={REGEXP_ONLY_CHARS}
       >
         <InputOTPGroup>
           <InputOTPSlot index={0} />
